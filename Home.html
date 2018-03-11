@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F193ED;
+    background-color:rgba(138, 0, 138, 0.9); 
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: rgb(167, 161, 161);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="Events.html">Events</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+<div style="width:100%;padding:5px; background-color:#f1f1f1">
+<span style="font-size:30px;cursor:pointer;color:#B102AB" onclick="openNav()" >&#9776; Meet Up</span>
+</div>
+<h2>Welcome to Meetup Web</h2>
+<p>here you can approve or dis-approve meetup events</p>
+
+<div>
+        <li>
+                <img src="http://lorempixum.com/100/100/nature/1" >
+                <h3>Meetup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+              </li>
+
+</div>
+
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "40%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+</body>
+</html>

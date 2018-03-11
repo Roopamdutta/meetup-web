@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+    font-family: 'Lato', sans-serif;
+    margin: 20px;
+}
+.accordion {
+    background-color: #F0C4E3;
+    color: #0F0F0F;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;    
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.panel.buttons{
+    position: relative;
+    margin-top: 50px;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.accept-btn {
+    background-color: #4CAF50; /* Green */
+}
+
+.reject-btn{
+    background-color: #f44336;
+}
+
+.img-main{
+
+    float:left;
+    height:200px;
+    width:500px;
+    padding-right: 20px;
+}
+</style>
+</head>
+<body>
+        <div class="accordion">
+            <div>
+<h2>Hello</h2>
+
+            </div>     
+        </div>
+        <div class="panel" >
+        <div>
+            <img class="img-main";  src="https://madailylife.com/wp-content/uploads/2017/03/earn-money-online-1.jpg"/>
+                   <h3>fLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </h3>      
+        </div>
+        
+        <div class="buttons"; style="float:right;">
+          <button class="accept-btn">Accept</button><button class="reject-btn">Reject</button>
+        </div>
+
+        </div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
